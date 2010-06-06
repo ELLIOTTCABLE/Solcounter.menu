@@ -12,4 +12,20 @@
 
 @implementation YRSolcounter
 
+- (id)initWithBundle:(NSBundle *)bundle
+{
+  if ( (self = [super initWithBundle: bundle]) == nil ) return nil;
+  
+  [self setView:
+    (menuExtraView = [[YRSolcounterView alloc] initWithFrame: [[self view] frame] menuExtra: self]) ];
+  
+  return self;
+}
+
+- (void)dealloc
+{
+  [menuExtraView release];
+  [super dealloc];
+}
+
 @end

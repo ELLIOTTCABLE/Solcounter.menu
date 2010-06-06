@@ -13,7 +13,7 @@
 
 
 @interface YRSolcounter : NSMenuExtra {
-  YRSolcounterView    *view;
+  YRSolcounterView    *menuExtraView;
 }
 
 @end

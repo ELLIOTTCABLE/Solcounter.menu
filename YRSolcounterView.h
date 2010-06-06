@@ -1,5 +1,5 @@
 //
-//  YRSolcounter.h
+//  YRSolcounterView.h
 //  Solcounter
 //
 //  Created by elliottcable on 14 766 ſ.
@@ -7,12 +7,10 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <SystemUIPlugin/NSMenuExtra.h>
-
-@class YRSolcounterView;
+#import <SystemUIPlugin/NSMenuExtraView.h>
 
 
-@interface YRSolcounter : NSMenuExtra {
+@interface YRSolcounterView : NSMenuExtraView {
 
 }
 

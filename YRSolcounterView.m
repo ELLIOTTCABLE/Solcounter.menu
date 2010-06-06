@@ -11,4 +11,14 @@
 
 @implementation YRSolcounterView
 
+- (void)drawRect:(NSRect)rect
+{
+  if ([_menuExtra isMenuDown])
+    [[NSColor selectedMenuItemTextColor] set];
+  else
+    [[NSColor blackColor] set];
+  
+  [[NSBezierPath bezierPathWithOvalInRect: NSMakeRect(4, 4, rect.size.width-8, rect.size.height-8 )] fill];
+}
+
 @end

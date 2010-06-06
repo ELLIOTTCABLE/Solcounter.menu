@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <SystemUIPlugin/NSMenuExtra.h>
 
 
 @interface YRSolcounter : NSMenuExtra {

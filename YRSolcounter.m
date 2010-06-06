@@ -16,6 +16,11 @@
 {
   if ( (self = [super initWithBundle: bundle]) == nil ) return nil;
   
+  defaults = [[BundleUserDefaults alloc]
+    initWithPersistentDomainName: [bundle objectForInfoDictionaryKey: @"CFBundleIdentifier"]];
+  [defaults registerDefaults: [NSDictionary dictionaryWithContentsOfFile:
+    [bundle pathForResource: @"UserDefaults" ofType: @"plist"]]];
+  
   [self setView:
     (menuExtraView = [[YRSolcounterView alloc] initWithFrame: [[self view] frame] menuExtra: self]) ];
   

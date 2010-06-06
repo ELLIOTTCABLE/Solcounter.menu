@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		5120FC5E11BBEB1A00FC34E3 /* SystemUIPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5120FC5D11BBEB1A00FC34E3 /* SystemUIPlugin.framework */; };
 		5120FC6211BBEB8E00FC34E3 /* YRSolcounter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5120FC6111BBEB8E00FC34E3 /* YRSolcounter.m */; };
+		5128772D11BC125600C68C2A /* UserDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5128772C11BC125600C68C2A /* UserDefaults.plist */; };
 		5128B9B211BBF06B00EA38A3 /* YRSolcounterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5128B9B111BBF06B00EA38A3 /* YRSolcounterView.m */; };
+		5128B9FB11BC0A3600EA38A3 /* BundleUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 5128B9F911BC0A3600EA38A3 /* BundleUserDefaults.m */; };
 		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
@@ -23,8 +25,11 @@
 		5120FC5D11BBEB1A00FC34E3 /* SystemUIPlugin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemUIPlugin.framework; path = /System/Library/PrivateFrameworks/SystemUIPlugin.framework; sourceTree = "<absolute>"; };
 		5120FC6011BBEB8E00FC34E3 /* YRSolcounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRSolcounter.h; sourceTree = "<group>"; };
 		5120FC6111BBEB8E00FC34E3 /* YRSolcounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRSolcounter.m; sourceTree = "<group>"; };
+		5128772C11BC125600C68C2A /* UserDefaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UserDefaults.plist; sourceTree = "<group>"; };
 		5128B9B011BBF06B00EA38A3 /* YRSolcounterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRSolcounterView.h; sourceTree = "<group>"; };
 		5128B9B111BBF06B00EA38A3 /* YRSolcounterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRSolcounterView.m; sourceTree = "<group>"; };
+		5128B9F911BC0A3600EA38A3 /* BundleUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BundleUserDefaults.m; sourceTree = "<group>"; };
+		5128B9FA11BC0A3600EA38A3 /* BundleUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BundleUserDefaults.h; sourceTree = "<group>"; };
 		8D5B49B6048680CD000E48DA /* Solcounter.menu */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Solcounter.menu; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
@@ -69,6 +74,7 @@
 			children = (
 				8D5B49B7048680CD000E48DA /* Info.plist */,
 				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
+				5128772C11BC125600C68C2A /* UserDefaults.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -115,8 +121,18 @@
 			isa = PBXGroup;
 			children = (
 				32DBCF630370AF2F00C91783 /* Solcounter_Prefix.pch */,
+				5128B9F811BC0A1B00EA38A3 /* Vendor */,
 			);
 			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		5128B9F811BC0A1B00EA38A3 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				5128B9F911BC0A3600EA38A3 /* BundleUserDefaults.m */,
+				5128B9FA11BC0A3600EA38A3 /* BundleUserDefaults.h */,
+			);
+			path = Vendor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */,
+				5128772D11BC125600C68C2A /* UserDefaults.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +192,7 @@
 			files = (
 				5120FC6211BBEB8E00FC34E3 /* YRSolcounter.m in Sources */,
 				5128B9B211BBF06B00EA38A3 /* YRSolcounterView.m in Sources */,
+				5128B9FB11BC0A3600EA38A3 /* BundleUserDefaults.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

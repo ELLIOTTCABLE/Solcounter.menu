@@ -8,12 +8,14 @@
 
 #import <Cocoa/Cocoa.h>
 #import <SystemUIPlugin/NSMenuExtra.h>
+#import "Vendor/BundleUserDefaults.h"
 
 @class YRSolcounterView;
 
 
 @interface YRSolcounter : NSMenuExtra {
-  YRSolcounterView    *menuExtraView;
+  YRSolcounterView       *menuExtraView;
+    BundleUserDefaults   *defaults;
 }
 
 @end

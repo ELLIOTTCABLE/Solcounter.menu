@@ -11,7 +11,7 @@
 
 
 @interface YRSolcounterView : NSMenuExtraView {
-
+  
 }
 
 @end

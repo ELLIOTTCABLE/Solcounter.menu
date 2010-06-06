@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5120FC5E11BBEB1A00FC34E3 /* SystemUIPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5120FC5D11BBEB1A00FC34E3 /* SystemUIPlugin.framework */; };
+		5120FC6211BBEB8E00FC34E3 /* YRSolcounter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5120FC6111BBEB8E00FC34E3 /* YRSolcounter.m */; };
 		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
@@ -19,6 +20,8 @@
 		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		32DBCF630370AF2F00C91783 /* Solcounter_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Solcounter_Prefix.pch; sourceTree = "<group>"; };
 		5120FC5D11BBEB1A00FC34E3 /* SystemUIPlugin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemUIPlugin.framework; path = /System/Library/PrivateFrameworks/SystemUIPlugin.framework; sourceTree = "<absolute>"; };
+		5120FC6011BBEB8E00FC34E3 /* YRSolcounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRSolcounter.h; sourceTree = "<group>"; };
+		5120FC6111BBEB8E00FC34E3 /* YRSolcounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRSolcounter.m; sourceTree = "<group>"; };
 		8D5B49B6048680CD000E48DA /* Solcounter.menu */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Solcounter.menu; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
@@ -70,6 +73,8 @@
 		08FB77AFFE84173DC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5120FC6011BBEB8E00FC34E3 /* YRSolcounter.h */,
+				5120FC6111BBEB8E00FC34E3 /* YRSolcounter.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -163,6 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5120FC6211BBEB8E00FC34E3 /* YRSolcounter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

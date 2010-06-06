@@ -23,6 +23,6 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>NSPrincipalClass</key>
-	<string></string>
+	<string>YRSolcounter</string>
 </dict>
 </plist>

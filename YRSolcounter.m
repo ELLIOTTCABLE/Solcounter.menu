@@ -21,15 +21,17 @@
   [defaults registerDefaults: [NSDictionary dictionaryWithContentsOfFile:
     [bundle pathForResource: @"UserDefaults" ofType: @"plist"]]];
   
-  [self setView:
-    (menuExtraView = [[YRSolcounterView alloc] initWithFrame: [[self view] frame] menuExtra: self]) ];
+  [[[NSNib alloc] initWithNibNamed: @"Solcounter" bundle: bundle]
+    instantiateNibWithOwner: self topLevelObjects: nil];
+  
+  [self setView: textField];
   
   return self;
 }
 
 - (void)dealloc
 {
-  [menuExtraView release];
+  [textField release];
   [super dealloc];
 }
 

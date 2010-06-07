@@ -14,7 +14,8 @@
 
 
 @interface YRSolcounter : NSMenuExtra {
-  YRSolcounterView       *menuExtraView;
+  IBOutlet //»
+  NSTextField            *textField;
     BundleUserDefaults   *defaults;
 }
 

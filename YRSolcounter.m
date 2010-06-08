@@ -7,7 +7,6 @@
 //
 
 #import "YRSolcounter.h"
-#import "YRSolcounterView.h"
 
 
 @implementation YRSolcounter

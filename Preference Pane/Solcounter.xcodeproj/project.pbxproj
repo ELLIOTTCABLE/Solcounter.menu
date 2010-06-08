@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51BFEB0411BE1ED600F234C3 /* Solcounter.menu in Resources */ = {isa = PBXBuildFile; fileRef = 51BFEB0211BE1E9C00F234C3 /* Solcounter.menu */; };
 		8D202CEA0486D31800D8A456 /* Solcounter_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 32DBCFA20370C41700C91783 /* Solcounter_Prefix.pch */; };
 		8D202CEB0486D31800D8A456 /* SolcounterPref.h in Headers */ = {isa = PBXBuildFile; fileRef = F506C03C013D9D7901CA16C8 /* SolcounterPref.h */; };
 		8D202CED0486D31800D8A456 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
@@ -17,12 +18,23 @@
 		8D202CF40486D31800D8A456 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F506C035013D953901CA16C8 /* PreferencePanes.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		51BFEB0111BE1E9C00F234C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 51BFEAFD11BE1E9C00F234C3 /* Solcounter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D5B49B6048680CD000E48DA /* Solcounter.menu */;
+			remoteInfo = Solcounter;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		089C1672FE841209C02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		089C167FFE841241C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		32DBCFA20370C41700C91783 /* Solcounter_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Solcounter_Prefix.pch; sourceTree = "<group>"; };
+		51BFEAFD11BE1E9C00F234C3 /* Solcounter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Solcounter.xcodeproj; path = ../Solcounter.xcodeproj; sourceTree = SOURCE_ROOT; };
 		8D202CF70486D31800D8A456 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D202CF80486D31800D8A456 /* Solcounter.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Solcounter.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
 		F506C035013D953901CA16C8 /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = /System/Library/Frameworks/PreferencePanes.framework; sourceTree = "<absolute>"; };
@@ -69,6 +81,7 @@
 		089C167CFE841241C02AAC07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				51BFEAFD11BE1E9C00F234C3 /* Solcounter.xcodeproj */,
 				8D202CF70486D31800D8A456 /* Info.plist */,
 				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
 				F506C040013D9D8001CA16C8 /* SolcounterPref.tiff */,
@@ -120,6 +133,14 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
+		51BFEAFE11BE1E9C00F234C3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				51BFEB0211BE1E9C00F234C3 /* Solcounter.menu */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -165,12 +186,28 @@
 			hasScannedForEncodings = 1;
 			mainGroup = 089C166AFE841209C02AAC07 /* Solcounter */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 51BFEAFE11BE1E9C00F234C3 /* Products */;
+					ProjectRef = 51BFEAFD11BE1E9C00F234C3 /* Solcounter.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				8D202CE80486D31800D8A456 /* Solcounter */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		51BFEB0211BE1E9C00F234C3 /* Solcounter.menu */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = Solcounter.menu;
+			remoteRef = 51BFEB0111BE1E9C00F234C3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8D202CEC0486D31800D8A456 /* Resources */ = {
@@ -180,6 +217,7 @@
 				8D202CED0486D31800D8A456 /* InfoPlist.strings in Resources */,
 				8D202CEE0486D31800D8A456 /* SolcounterPref.tiff in Resources */,
 				8D202CEF0486D31800D8A456 /* SolcounterPref.xib in Resources */,
+				51BFEB0411BE1ED600F234C3 /* Solcounter.menu in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

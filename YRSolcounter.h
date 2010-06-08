@@ -17,6 +17,7 @@
   IBOutlet //»
   NSTextField            *textField;
     BundleUserDefaults   *defaults;
+  NSTimer                *timer;
 }
 
 @end

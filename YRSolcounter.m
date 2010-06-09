@@ -19,7 +19,7 @@
     registerDefaults: [NSDictionary dictionaryWithContentsOfFile:
       [bundle pathForResource: @"UserDefaults" ofType: @"plist"]]];
   
-  timer = [NSTimer scheduledTimerWithTimeInterval: 0.0
+  timer = [NSTimer scheduledTimerWithTimeInterval: 0.0864
                                            target: self
                                          selector: @selector(handleTimer:)
                                          userInfo: nil
@@ -34,13 +34,15 @@
   [textField setFrame: NSMakeRect(frame.origin.x, frame.origin.y, frame.size.width, frame.size.height - 1)];
   
   NSURL *fontURL = [NSURL fileURLWithPath: [[self bundle] pathForResource: @"FertigoPro-Truncated"
-                                                                      ofType: @"otf"
-                                                                 inDirectory: @"Fonts"]];
+                                                                   ofType: @"otf"
+                                                              inDirectory: @"Fonts"]];
   
   // Core Foundation pain
   radixFont = CTFontCreateWithGraphicsFont(
     CGFontCreateWithDataProvider(CGDataProviderCreateWithURL((CFURLRef)fontURL)), 14.0, NULL, NULL);
   // end Core Foundation pain
+  
+  NSLog(@"radixFont: %@", radixFont);
   
   [self handleTimer: nil];
   

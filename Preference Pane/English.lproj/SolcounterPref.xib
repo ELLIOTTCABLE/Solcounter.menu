@@ -41,7 +41,7 @@
 			<object class="NSWindowTemplate" id="660800786">
 				<int key="NSWindowStyleMask">7</int>
 				<int key="NSWindowBacking">2</int>
-				<string key="NSWindowRect">{{176, 715}, {668, 368}}</string>
+				<string key="NSWindowRect">{{176, 1029}, {668, 54}}</string>
 				<int key="NSWTFlags">1081606144</int>
 				<string key="NSWindowTitle">&lt;&lt; do not localize &gt;&gt;</string>
 				<string key="NSWindowClass">NSWindow</string>
@@ -55,13 +55,13 @@
 					<int key="NSvFlags">256</int>
 					<object class="NSMutableArray" key="NSSubviews">
 						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="NSButton" id="829611175">
+						<object class="NSButton" id="263448171">
 							<reference key="NSNextResponder" ref="1037298196"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{18, 332}, {207, 18}}</string>
+							<string key="NSFrame">{{18, 18}, {207, 18}}</string>
 							<reference key="NSSuperview" ref="1037298196"/>
 							<bool key="NSEnabled">YES</bool>
-							<object class="NSButtonCell" key="NSCell" id="311984259">
+							<object class="NSButtonCell" key="NSCell" id="432035462">
 								<int key="NSCellFlags">67239424</int>
 								<int key="NSCellFlags2">0</int>
 								<string key="NSContents">Show Solcounter in menu bar</string>
@@ -70,7 +70,7 @@
 									<double key="NSSize">13</double>
 									<int key="NSfFlags">1044</int>
 								</object>
-								<reference key="NSControlView" ref="829611175"/>
+								<reference key="NSControlView" ref="263448171"/>
 								<int key="NSButtonFlags">1211912703</int>
 								<int key="NSButtonFlags2">2</int>
 								<object class="NSCustomResource" key="NSNormalImage">
@@ -87,7 +87,7 @@
 							</object>
 						</object>
 					</object>
-					<string key="NSFrameSize">{668, 368}</string>
+					<string key="NSFrameSize">{668, 54}</string>
 					<reference key="NSSuperview"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1920, 1178}}</string>
@@ -143,7 +143,7 @@
 						<reference key="object" ref="1037298196"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="829611175"/>
+							<reference ref="263448171"/>
 						</object>
 						<reference key="parent" ref="660800786"/>
 					</object>
@@ -155,17 +155,17 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">99</int>
-						<reference key="object" ref="829611175"/>
+						<reference key="object" ref="263448171"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="311984259"/>
+							<reference ref="432035462"/>
 						</object>
 						<reference key="parent" ref="1037298196"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">100</int>
-						<reference key="object" ref="311984259"/>
-						<reference key="parent" ref="829611175"/>
+						<reference key="object" ref="432035462"/>
+						<reference key="parent" ref="263448171"/>
 					</object>
 				</object>
 			</object>
@@ -189,9 +189,9 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{321, 429}, {668, 368}}</string>
+					<string>{{321, 743}, {668, 54}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{321, 429}, {668, 368}}</string>
+					<string>{{321, 743}, {668, 54}}</string>
 					<integer value="1"/>
 					<integer value="1"/>
 					<string>{224.664, 10}</string>
@@ -337,7 +337,7 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">NSControl</string>
 					<string key="superclassName">NSView</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier" id="525607180">
+					<object class="IBClassDescriptionSource" key="sourceIdentifier" id="1014798451">
 						<string key="majorKey">IBFrameworkSource</string>
 						<string key="minorKey">AppKit.framework/Headers/NSControl.h</string>
 					</object>
@@ -379,7 +379,7 @@
 				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">NSObject</string>
-					<reference key="sourceIdentifier" ref="525607180"/>
+					<reference key="sourceIdentifier" ref="1014798451"/>
 				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">NSObject</string>

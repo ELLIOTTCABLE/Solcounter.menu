@@ -1,5 +1,5 @@
 //
-//  SolcounterPref.h
+//  YRSolcounterPref.h
 //  Solcounter
 //
 //  Created by elliottcable on 14 768 ſ.

@@ -1,5 +1,5 @@
 //
-//  SolcounterPref.m
+//  YRSolcounterPref.m
 //  Solcounter
 //
 //  Created by elliottcable on 14 768 ſ.

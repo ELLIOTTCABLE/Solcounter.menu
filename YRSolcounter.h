@@ -18,6 +18,7 @@
   NSTextField            *textField;
     BundleUserDefaults   *defaults;
   NSTimer                *timer;
+  NSFont                 *radixFont;
 }
 
 -(id)     initWithBundle: (NSBundle*)bundle;

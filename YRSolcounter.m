@@ -33,6 +33,15 @@
   NSRect frame = [textField frame];
   [textField setFrame: NSMakeRect(frame.origin.x, frame.origin.y, frame.size.width, frame.size.height - 1)];
   
+  NSURL *fontURL = [NSURL fileURLWithPath: [[self bundle] pathForResource: @"FertigoPro-Truncated"
+                                                                      ofType: @"otf"
+                                                                 inDirectory: @"Fonts"]];
+  
+  // Core Foundation pain
+  radixFont = CTFontCreateWithGraphicsFont(
+    CGFontCreateWithDataProvider(CGDataProviderCreateWithURL((CFURLRef)fontURL)), 14.0, NULL, NULL);
+  // end Core Foundation pain
+  
   [self handleTimer: nil];
   
   [nib dealloc];
@@ -42,13 +51,43 @@
 -(void) handleTimer: (NSTimer*)_ {
   double date = [[NSDate date] timeIntervalSince1970];
   
-  [textField setStringValue:
-    [NSString stringWithFormat: @"%3llu %03llu ſ %03llu %03llu %03llu",
-                                    (unsigned long long int)(date / 86400000) % 1000,
-                                    (unsigned long long int)(date / 86400) % 1000,
-                                    (unsigned long long int)(date / 86.4) % 1000,
-                                    (unsigned long long int)(date / 0.0864) % 1000,
-                                    (unsigned long long int)(date / 0.0000864) % 1000]];
+  NSString *solCount = [NSString stringWithFormat: @"%3llu %03llu ſ %03llu %03llu %03llu",
+    (unsigned long long int)(date / 86400000.0)       % 1000,
+    (unsigned long long int)(date /    86400.0)       % 1000,
+    (unsigned long long int)(date /       86.4)       % 1000,
+    (unsigned long long int)(date /        0.0864)    % 1000,
+    (unsigned long long int)(date /        0.0000864) % 1000];
+  
+  NSDictionary *solCountAttributes = [[NSDictionary alloc] initWithObjectsAndKeys:
+    [NSFont systemFontOfSize: 14.0],    NSFontAttributeName,
+    [[NSColor blackColor] colorWithAlphaComponent:.9], NSForegroundColorAttributeName,
+    nil];
+  NSMutableAttributedString *attributedSolCount = //»
+    [[NSMutableAttributedString alloc] initWithString: solCount
+                                           attributes: solCountAttributes];
+  
+  int length = [solCount length];
+  NSRange nanosolRange  = NSMakeRange(length - (1 * 4),     4);
+  NSRange microsolRange = NSMakeRange(length - (2 * 4),     4);
+  NSRange millisolRange = NSMakeRange(length - (3 * 4),     4);
+  NSRange radixRange    = NSMakeRange(length - (3 * 4) - 1, 1);
+  NSRange solRange      = NSMakeRange(length - (4 * 4) - 1, 4);
+  NSRange kilosolRange  = NSMakeRange(0,                    3);
+  
+  [attributedSolCount addAttribute: NSForegroundColorAttributeName
+                             value: [[NSColor blackColor] colorWithAlphaComponent:.3]
+                             range: nanosolRange];
+  [attributedSolCount addAttribute: NSForegroundColorAttributeName
+                             value: [[NSColor blackColor] colorWithAlphaComponent:.3]
+                             range: microsolRange];
+  [attributedSolCount addAttribute: NSFontAttributeName value: radixFont range: radixRange];
+  [attributedSolCount addAttribute: NSForegroundColorAttributeName
+                             value: [[NSColor blackColor] colorWithAlphaComponent:.3]
+                             range: kilosolRange];
+  
+  [textField setAttributedStringValue: attributedSolCount];
+  [attributedSolCount release];
+  [solCountAttributes release];
 }
 
 -(void) dealloc

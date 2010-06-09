@@ -12,6 +12,7 @@
 		5128772D11BC125600C68C2A /* UserDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5128772C11BC125600C68C2A /* UserDefaults.plist */; };
 		5128777511BC45B700C68C2A /* Solcounter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5128777411BC45B700C68C2A /* Solcounter.xib */; };
 		5128B9FB11BC0A3600EA38A3 /* BundleUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 5128B9F911BC0A3600EA38A3 /* BundleUserDefaults.m */; };
+		516859CA11BFD0E800DC7D20 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 516859C711BFD0E800DC7D20 /* Fonts */; };
 		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
@@ -29,6 +30,7 @@
 		5128777411BC45B700C68C2A /* Solcounter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Solcounter.xib; sourceTree = "<group>"; };
 		5128B9F911BC0A3600EA38A3 /* BundleUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BundleUserDefaults.m; sourceTree = "<group>"; };
 		5128B9FA11BC0A3600EA38A3 /* BundleUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BundleUserDefaults.h; sourceTree = "<group>"; };
+		516859C711BFD0E800DC7D20 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 		8D5B49B6048680CD000E48DA /* Solcounter.menu */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Solcounter.menu; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
@@ -71,6 +73,7 @@
 		089C167CFE841241C02AAC07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				516859C711BFD0E800DC7D20 /* Fonts */,
 				8D5B49B7048680CD000E48DA /* Info.plist */,
 				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
 				5128772C11BC125600C68C2A /* UserDefaults.plist */,
@@ -179,6 +182,7 @@
 				8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */,
 				5128772D11BC125600C68C2A /* UserDefaults.plist in Resources */,
 				5128777511BC45B700C68C2A /* Solcounter.xib in Resources */,
+				516859CA11BFD0E800DC7D20 /* Fonts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

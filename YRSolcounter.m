@@ -61,8 +61,8 @@
     (unsigned long long int)(date /        0.0000864) % 1000];
   
   NSDictionary *solCountAttributes = [[NSDictionary alloc] initWithObjectsAndKeys:
-    [NSFont systemFontOfSize: 14.0],    NSFontAttributeName,
-    [[NSColor blackColor] colorWithAlphaComponent:.9], NSForegroundColorAttributeName,
+    [NSFont menuFontOfSize: 14.0],                        NSFontAttributeName,
+    [[NSColor blackColor] colorWithAlphaComponent: .9],   NSForegroundColorAttributeName,
     nil];
   NSMutableAttributedString *attributedSolCount = //»
     [[NSMutableAttributedString alloc] initWithString: solCount

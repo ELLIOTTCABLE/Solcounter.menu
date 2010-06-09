@@ -52,7 +52,7 @@ OSStatus CoreMenuExtraRemoveMenuExtra(OpaqueMenuExtra *menuExtraIn, void *_0);
 
 -(void) loadExtra: (NSString*)extraPath { int sleepCount;
   NSURL *extraURL = [NSURL fileURLWithPath: extraPath];
-  CMEAddExtra((CFURLRef)extraURL, 0);
+  CMEAddExtra((CFURLRef)extraURL, -1);
   
   sleepCount = 0;
   while (sleepCount < 1000000) {
@@ -66,7 +66,7 @@ OSStatus CoreMenuExtraRemoveMenuExtra(OpaqueMenuExtra *menuExtraIn, void *_0);
   if (extraPath != crackerPath && ![self isExtraLoaded: extraPath])
     [self loadExtra: crackerPath];
   
-  CMEAddExtra((CFURLRef)extraURL, 0);
+  CMEAddExtra((CFURLRef)extraURL, -1);
   
   sleepCount = 0;
   while (sleepCount < 1000000) {

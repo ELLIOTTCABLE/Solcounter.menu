@@ -30,6 +30,9 @@
   [nib instantiateNibWithOwner: self topLevelObjects: /* sets `textField` */ nil];
   [self setView: textField];
   
+  NSRect frame = [textField frame];
+  [textField setFrame: NSMakeRect(frame.origin.x, frame.origin.y, frame.size.width, frame.size.height - 1)];
+  
   [self handleTimer: nil];
   
   [nib dealloc];

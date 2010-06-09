@@ -41,7 +41,7 @@
 			<object class="NSTextField" id="105485268">
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">303</int>
-				<string key="NSFrameSize">{150, 22}</string>
+				<string key="NSFrameSize">{175, 22}</string>
 				<reference key="NSSuperview"/>
 				<bool key="NSEnabled">YES</bool>
 				<object class="NSTextFieldCell" key="NSCell" id="249073381">
@@ -141,7 +141,7 @@
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<string>{{562, 630}, {150, 22}}</string>
+					<string>{{562, 630}, {175, 22}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 				</object>

@@ -30,12 +30,13 @@
   [nib instantiateNibWithOwner: self topLevelObjects: /* sets `textField` */ nil];
   [self setView: textField];
   
+  [self handleTimer: nil];
+  
   [nib dealloc];
   return self;
 }
 
--(void) handleTimer: (NSTimer*)_
-{
+-(void) handleTimer: (NSTimer*)_ {
   double date = [[NSDate date] timeIntervalSince1970];
   
   [textField setStringValue:

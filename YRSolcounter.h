@@ -20,4 +20,7 @@
   NSTimer                *timer;
 }
 
+-(id)     initWithBundle: (NSBundle*)bundle;
+-(void)   handleTimer: (NSTimer*)_;
+
 @end

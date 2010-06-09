@@ -23,7 +23,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 51BFEAFD11BE1E9C00F234C3 /* Solcounter.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 8D5B49B6048680CD000E48DA /* Solcounter.menu */;
+			remoteGlobalIDString = 8D5B49B6048680CD000E48DA;
 			remoteInfo = Solcounter;
 		};
 /* End PBXContainerItemProxy section */

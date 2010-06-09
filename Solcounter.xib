@@ -53,7 +53,7 @@
 						<double key="NSSize">13</double>
 						<int key="NSfFlags">1044</int>
 					</object>
-					<string key="NSPlaceholderString">ſ 000</string>
+					<string key="NSPlaceholderString">Loading Solcounter…</string>
 					<reference key="NSControlView" ref="105485268"/>
 					<object class="NSColor" key="NSBackgroundColor">
 						<int key="NSColorSpace">6</int>
@@ -141,7 +141,7 @@
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<string>{{1072, 581}, {150, 22}}</string>
+					<string>{{562, 630}, {150, 22}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 				</object>

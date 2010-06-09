@@ -13,7 +13,12 @@
 
 - (void) mainViewDidLoad
 {
-  
+  NSLog(@"- mainViewDidLoad");
+}
+
+- (IBAction) toggleActivation:(id)sender
+{
+  NSLog(@"- toggleActivation: %@", sender);
 }
 
 @end

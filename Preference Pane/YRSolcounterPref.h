@@ -11,9 +11,10 @@
 
 @interface YRSolcounterPref : NSPreferencePane 
 {
-
+  
 }
 
 - (void) mainViewDidLoad;
+- (IBAction) toggleActivation:(id)sender;
 
 @end

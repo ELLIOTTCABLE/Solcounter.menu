@@ -11,10 +11,14 @@
 
 @interface YRSolcounterPref : NSPreferencePane 
 {
-  
+  IBOutlet NSButton *extraEnabled;
 }
 
 - (void) mainViewDidLoad;
-- (IBAction) toggleActivation:(id)sender;
+- (IBAction) toggleExtra:(id)sender;
+
+- (void)loadExtra:(NSString *)extraPath;
+- (void)removeExtra:(NSString *)extraPath;
+- (BOOL)isExtraLoaded:(NSString *)extraPath;
 
 @end

@@ -24,36 +24,33 @@ OSStatus CoreMenuExtraRemoveMenuExtra(OpaqueMenuExtra *menuExtraIn, void *_0);
 
 @implementation YRSolcounterPref
 
-- (void) mainViewDidLoad
-{
+-(void) mainViewDidLoad {
   NSString *extraPath = [[self bundle] pathForResource: @"Solcounter"
                                                 ofType: @"menu"
                                            inDirectory: @""];
   
-  if ([self isExtraLoaded:extraPath])
-    [extraEnabled setState:NSOnState];
+  if ([self isExtraLoaded: extraPath])
+    [extraEnabled setState: NSOnState];
 }
 
-- (IBAction)toggleExtra:(id)sender
-{
+-(IBAction) toggleExtra: (id)sender {
   NSString *extraPath = [[self bundle] pathForResource: @"Solcounter"
                                                 ofType: @"menu"
                                            inDirectory: @""];
   
-  if (([sender state] == NSOnState) && ![self isExtraLoaded:extraPath]) {
-    [self loadExtra:extraPath];
-    if (![self isExtraLoaded:extraPath])
-      [sender setState:NSOffState];
+  if (([sender state] == NSOnState) && ![self isExtraLoaded: extraPath]) {
+    [self loadExtra: extraPath];
+    if (![self isExtraLoaded: extraPath])
+      [sender setState: NSOffState];
   } else //»
-  if (([sender state] == NSOffState) && [self isExtraLoaded:extraPath]) {
-    [self removeExtra:extraPath];
-    if ([self isExtraLoaded:extraPath])
-      [sender setState:NSOnState];
+  if (([sender state] == NSOffState) && [self isExtraLoaded: extraPath]) {
+    [self removeExtra: extraPath];
+    if ([self isExtraLoaded: extraPath])
+      [sender setState: NSOnState];
   }
 }
 
-- (void)loadExtra:(NSString *)extraPath
-{ int sleepCount;
+-(void) loadExtra: (NSString*)extraPath { int sleepCount;
   NSURL *extraURL = [NSURL fileURLWithPath: extraPath];
   CMEAddExtra((CFURLRef)extraURL, 0);
   
@@ -67,7 +64,7 @@ OSStatus CoreMenuExtraRemoveMenuExtra(OpaqueMenuExtra *menuExtraIn, void *_0);
                                              inDirectory: @""];
   
   if (extraPath != crackerPath && ![self isExtraLoaded: extraPath])
-    [self loadExtra:crackerPath];
+    [self loadExtra: crackerPath];
   
   CMEAddExtra((CFURLRef)extraURL, 0);
   
@@ -77,8 +74,7 @@ OSStatus CoreMenuExtraRemoveMenuExtra(OpaqueMenuExtra *menuExtraIn, void *_0);
     usleep(sleepCount += 250000); }
 }
 
-- (void)removeExtra:(NSString *)extraPath
-{ OpaqueMenuExtra *extra;
+-(void) removeExtra: (NSString*)extraPath { OpaqueMenuExtra *extra;
   NSString *extraID = [[NSBundle bundleWithPath: extraPath]
                         objectForInfoDictionaryKey: @"CFBundleIdentifier"];
   
@@ -86,8 +82,7 @@ OSStatus CoreMenuExtraRemoveMenuExtra(OpaqueMenuExtra *menuExtraIn, void *_0);
     CMERemoveExtra(extra);
 }
 
-- (BOOL)isExtraLoaded:(NSString *)extraPath
-{ OpaqueMenuExtra *extra;
+-(BOOL) isExtraLoaded: (NSString*)extraPath { OpaqueMenuExtra *extra;
   NSString *extraID = [[NSBundle bundleWithPath: extraPath]
                         objectForInfoDictionaryKey: @"CFBundleIdentifier"];
   

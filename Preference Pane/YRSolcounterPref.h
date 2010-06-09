@@ -9,16 +9,16 @@
 #import <PreferencePanes/PreferencePanes.h>
 
 
-@interface YRSolcounterPref : NSPreferencePane 
-{
-  IBOutlet NSButton *extraEnabled;
+@interface YRSolcounterPref: NSPreferencePane  {
+  IBOutlet //»
+  NSButton   *extraEnabled;
 }
 
-- (void) mainViewDidLoad;
-- (IBAction) toggleExtra:(id)sender;
+-(void)       mainViewDidLoad;
+-(IBAction)   toggleExtra: (id)sender;
 
-- (void)loadExtra:(NSString *)extraPath;
-- (void)removeExtra:(NSString *)extraPath;
-- (BOOL)isExtraLoaded:(NSString *)extraPath;
+-(void)       loadExtra:     (NSString*)extraPath;
+-(void)       removeExtra:   (NSString*)extraPath;
+-(BOOL)       isExtraLoaded: (NSString*)extraPath;
 
 @end

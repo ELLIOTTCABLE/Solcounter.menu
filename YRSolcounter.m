@@ -11,8 +11,7 @@
 
 @implementation YRSolcounter
 
-- (id)initWithBundle:(NSBundle *)bundle
-{
+-(id) initWithBundle: (NSBundle*)bundle {
   if ( (self = [super initWithBundle: bundle]) == nil ) return nil;
   
   [(defaults = [[BundleUserDefaults alloc]
@@ -35,7 +34,7 @@
   return self;
 }
 
-- (void)handleTimer:(NSTimer *)_
+-(void) handleTimer: (NSTimer*)_
 {
   double date = [[NSDate date] timeIntervalSince1970];
   
@@ -48,7 +47,7 @@
                                     (unsigned long long int)(date / 0.0000864) % 1000]];
 }
 
-- (void)dealloc
+-(void) dealloc
 {
   [textField release];
   [super dealloc];

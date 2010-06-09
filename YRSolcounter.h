@@ -13,7 +13,7 @@
 @class YRSolcounterView;
 
 
-@interface YRSolcounter : NSMenuExtra {
+@interface YRSolcounter: NSMenuExtra {
   IBOutlet //»
   NSTextField            *textField;
     BundleUserDefaults   *defaults;

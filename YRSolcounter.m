@@ -45,7 +45,7 @@
   
   radixFont = (NSFont*)CTFontCreateWithFontDescriptor(
     (CTFontDescriptorRef)[[(NSArray*)CTFontManagerCreateFontDescriptorsFromURL((CFURLRef)fontURL) autorelease]
-                                       lastObject], 18.0, NULL);
+                                       lastObject], 19.0, NULL);
   
   [self handleTimer: nil];
 }

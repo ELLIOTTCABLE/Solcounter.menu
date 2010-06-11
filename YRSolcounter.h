@@ -20,6 +20,7 @@
 }
 
 -(id)     initWithBundle: (NSBundle*)bundle;
+-(void)   initTextField;
 -(void)   handleTimer: (NSTimer*)_;
 
 @end

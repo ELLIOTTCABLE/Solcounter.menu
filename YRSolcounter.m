@@ -25,11 +25,16 @@
                                          userInfo: nil
                                           repeats: YES];
   
-  NSNib *nib = [[NSNib alloc] initWithNibNamed: @"Solcounter" bundle: bundle];
+  NSNib *nib = [[[NSNib alloc] initWithNibNamed: @"Solcounter" bundle: bundle] autorelease];
   
   [nib instantiateNibWithOwner: self topLevelObjects: /* sets `textField` */ nil];
   [self setView: textField];
   
+  [self initTextField];
+  return self;
+}
+
+-(void) initTextField {
   NSRect frame = [textField frame];
   [textField setFrame: NSMakeRect(frame.origin.x, frame.origin.y, frame.size.width, frame.size.height - 1)];
   [[textField cell] setBackgroundStyle: NSBackgroundStyleRaised];
@@ -43,8 +48,6 @@
                                        lastObject], 18.0, NULL);
   
   [self handleTimer: nil];
-  [nib dealloc];
-  return self;
 }
 
 -(void) handleTimer: (NSTimer*)_ {

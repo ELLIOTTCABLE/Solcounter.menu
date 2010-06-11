@@ -38,14 +38,11 @@
                                                                    ofType: @"otf"
                                                               inDirectory: @"Fonts"]];
   
-  // Core Foundation pain
-  radixFont = (NSFont*)CTFontCreateWithFontDescriptor((CTFontDescriptorRef)[[(NSArray*)CTFontManagerCreateFontDescriptorsFromURL((CFURLRef)fontURL) autorelease] objectAtIndex:0], 18., NULL);
-  // end Core Foundation pain
-  
-  NSLog(@"radixFont: %@", radixFont);
+  radixFont = (NSFont*)CTFontCreateWithFontDescriptor(
+    (CTFontDescriptorRef)[[(NSArray*)CTFontManagerCreateFontDescriptorsFromURL((CFURLRef)fontURL) autorelease]
+                                       lastObject], 18.0, NULL);
   
   [self handleTimer: nil];
-  
   [nib dealloc];
   return self;
 }
@@ -60,13 +57,12 @@
     (unsigned long long int)(date /        0.0864)    % 1000,
     (unsigned long long int)(date /        0.0000864) % 1000];
   
-  NSDictionary *solCountAttributes = [[NSDictionary alloc] initWithObjectsAndKeys:
-    [NSFont menuFontOfSize: 14.0],                        NSFontAttributeName,
-    [[NSColor blackColor] colorWithAlphaComponent: .9],   NSForegroundColorAttributeName,
-    nil];
-  NSMutableAttributedString *attributedSolCount = //»
-    [[NSMutableAttributedString alloc] initWithString: solCount
-                                           attributes: solCountAttributes];
+  NSMutableAttributedString *attributedSolCount = [[[NSMutableAttributedString alloc]
+    initWithString: solCount
+        attributes: [[[NSDictionary alloc] initWithObjectsAndKeys:
+          [NSFont menuFontOfSize: 14.0],                        NSFontAttributeName,
+          [[NSColor blackColor] colorWithAlphaComponent: 1.0],   NSForegroundColorAttributeName,
+        nil] autorelease]] autorelease];
   
   int length = [solCount length];
   NSRange nanosolRange  = NSMakeRange(length - (1 * 4),     4);
@@ -76,20 +72,19 @@
   NSRange solRange      = NSMakeRange(length - (4 * 4) - 1, 4);
   NSRange kilosolRange  = NSMakeRange(0,                    3);
   
+  [attributedSolCount addAttribute: NSFontAttributeName value: radixFont range: radixRange];
+  
   [attributedSolCount addAttribute: NSForegroundColorAttributeName
                              value: [[NSColor blackColor] colorWithAlphaComponent:.3]
                              range: nanosolRange];
   [attributedSolCount addAttribute: NSForegroundColorAttributeName
                              value: [[NSColor blackColor] colorWithAlphaComponent:.3]
                              range: microsolRange];
-  [attributedSolCount addAttribute: NSFontAttributeName value: radixFont range: radixRange];
   [attributedSolCount addAttribute: NSForegroundColorAttributeName
                              value: [[NSColor blackColor] colorWithAlphaComponent:.3]
                              range: kilosolRange];
   
   [textField setAttributedStringValue: attributedSolCount];
-  [attributedSolCount release];
-  [solCountAttributes release];
 }
 
 -(void) dealloc

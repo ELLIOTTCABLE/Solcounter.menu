@@ -32,6 +32,7 @@
   
   NSRect frame = [textField frame];
   [textField setFrame: NSMakeRect(frame.origin.x, frame.origin.y, frame.size.width, frame.size.height - 1)];
+  [[textField cell] setBackgroundStyle: NSBackgroundStyleRaised];
   
   NSURL *fontURL = [NSURL fileURLWithPath: [[self bundle] pathForResource: @"FertigoPro-Truncated"
                                                                    ofType: @"otf"

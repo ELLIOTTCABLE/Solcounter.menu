@@ -38,8 +38,11 @@
                                                               inDirectory: @"Fonts"]];
   
   // Core Foundation pain
-  radixFont = CTFontCreateWithGraphicsFont(
-    CGFontCreateWithDataProvider(CGDataProviderCreateWithURL((CFURLRef)fontURL)), 14.0, NULL, NULL);
+  CGDataProviderRef cgDataProvider = CGDataProviderCreateWithURL((CFURLRef)fontURL);
+  CGFontRef cgFont = CGFontCreateWithDataProvider(cgDataProvider);
+  radixFont = CTFontCreateWithGraphicsFont(cgFont, 14.0, NULL, NULL);
+  CFRelease(cgFont);
+  CFRelease(cgDataProvider);
   // end Core Foundation pain
   
   NSLog(@"radixFont: %@", radixFont);

@@ -10,8 +10,6 @@
 #import <SystemUIPlugin/NSMenuExtra.h>
 #import "Vendor/BundleUserDefaults.h"
 
-@class YRSolcounterView;
-
 
 @interface YRSolcounter: NSMenuExtra {
   IBOutlet //»

@@ -36,13 +36,12 @@
   
   [self setView: textField];
   
-  NSURL *fontURL = [NSURL fileURLWithPath: [[self bundle] pathForResource: @"FertigoPro-Truncated"
-                                                                   ofType: @"otf"
-                                                              inDirectory: @"Fonts"]];
-  
   radixFont = (NSFont*)CTFontCreateWithFontDescriptor(
-    (CTFontDescriptorRef)[[(NSArray*)CTFontManagerCreateFontDescriptorsFromURL((CFURLRef)fontURL) autorelease]
-                                       lastObject], 19.0, NULL);
+    (CTFontDescriptorRef)[[(NSArray*)CTFontManagerCreateFontDescriptorsFromURL(
+      (CFURLRef)[NSURL fileURLWithPath: [[self bundle] pathForResource: @"FertigoPro-Truncated"
+                                                                ofType: @"otf"
+                                                           inDirectory: @"Fonts"]])
+    autorelease] lastObject], 19.0, NULL);
   
   [self handleTimer: nil];
 }

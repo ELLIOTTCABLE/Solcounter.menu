@@ -19,7 +19,7 @@
     registerDefaults: [NSDictionary dictionaryWithContentsOfFile:
       [bundle pathForResource: @"UserDefaults" ofType: @"plist"]]];
   
-  timer = [NSTimer scheduledTimerWithTimeInterval: 0.0864
+  timer = [NSTimer scheduledTimerWithTimeInterval: [defaults floatForKey: @"Interval"] * 86400.0
                                            target: self
                                          selector: @selector(handleTimer:)
                                          userInfo: nil
@@ -50,7 +50,7 @@
 -(void) handleTimer: (NSTimer*)_ {
   double date = [[NSDate date] timeIntervalSince1970] / 86400.0;
   
-  NSString *solCount = [NSString stringWithFormat: @"%3llu %03llu ſ %03llu %03llu %03llu",
+  NSString *solCount = [NSString stringWithFormat: [defaults stringForKey: @"Format"],
     (unsigned long long int)(date / 1000.0)         % 1000,
     (unsigned long long int)(date /    1.0)         % 1000,
     (unsigned long long int)(date /    0.001)       % 1000,
@@ -66,7 +66,8 @@
   
   [attributedSolCount addAttribute: NSFontAttributeName
                              value: radixFont
-                             range: NSMakeRange([solCount length] - (3 * 4) - 1, 1)];
+                             range: [solCount rangeOfCharacterFromSet:
+                                      [NSCharacterSet characterSetWithCharactersInString: @"ſ"]]];
   
   [textField setAttributedStringValue: attributedSolCount];
 }

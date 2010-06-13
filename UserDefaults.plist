@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!--
-   UserDefaults.plist
-   Solcounter
-
-   Created by elliottcable on 14 766 ſ.
-   Copyright 2010 yreality. All rights reserved.
--->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-    <dict>
-    
-    </dict>
+<dict>
+	<key>Interval</key>
+	<real>1e-06</real>
+	<key>Format</key>
+	<string>%1$3llu %2$03llu ſ %3$03llu %4$03llu</string>
+</dict>
 </plist>

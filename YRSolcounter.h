@@ -12,11 +12,15 @@
 
 
 @interface YRSolcounter: NSMenuExtra {
-  IBOutlet //»
-  NSTextField            *textField;
-    BundleUserDefaults   *defaults;
-  NSTimer                *timer;
-  NSFont                 *radixFont;
+IBOutlet //»
+NSTextField            *textField;
+NSFont                 *radixFont;
+
+NSTimer                *timer;
+
+  BundleUserDefaults   *defaults;
+NSNumber               *integralPrecision;
+NSNumber               *fractionalPrecision;
 }
 
 -(id)     initWithBundle: (NSBundle*)bundle;

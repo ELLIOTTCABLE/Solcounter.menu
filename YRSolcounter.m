@@ -19,6 +19,9 @@
     registerDefaults: [NSDictionary dictionaryWithContentsOfFile:
       [bundle pathForResource: @"UserDefaults" ofType: @"plist"]]];
   
+  integralPrecision   = [[defaults dictionaryForKey: @"Precision"] objectForKey: @"Integral"];
+  fractionalPrecision = [[defaults dictionaryForKey: @"Precision"] objectForKey: @"Fractional"];
+  
   timer = [NSTimer scheduledTimerWithTimeInterval: 0.0864
                                            target: self
                                          selector: @selector(handleTimer:)

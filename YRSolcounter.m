@@ -67,28 +67,9 @@
           [[NSColor blackColor] colorWithAlphaComponent: 1.0],   NSForegroundColorAttributeName,
         nil] autorelease]] autorelease];
   
-  int length = [solCount length];
-  NSRange nanosolRange  = NSMakeRange(length - (1 * 4),     4);
-  NSRange microsolRange = NSMakeRange(length - (2 * 4),     4);
-//NSRange millisolRange = NSMakeRange(length - (3 * 4),     4);
-  NSRange radixRange    = NSMakeRange(length - (3 * 4) - 1, 1);
-  NSRange solRange      = NSMakeRange(length - (4 * 4) - 1, 4);
-  NSRange kilosolRange  = NSMakeRange(0,                    3);
-  
-  [attributedSolCount addAttribute: NSFontAttributeName value: radixFont range: radixRange];
-  
-  [attributedSolCount addAttribute: NSForegroundColorAttributeName
-                             value: [[NSColor blackColor] colorWithAlphaComponent:.2]
-                             range: nanosolRange];
-  [attributedSolCount addAttribute: NSForegroundColorAttributeName
-                             value: [[NSColor blackColor] colorWithAlphaComponent:.2]
-                             range: microsolRange];
-  [attributedSolCount addAttribute: NSForegroundColorAttributeName
-                             value: [[NSColor blackColor] colorWithAlphaComponent:.2]
-                             range: solRange];
-  [attributedSolCount addAttribute: NSForegroundColorAttributeName
-                             value: [[NSColor blackColor] colorWithAlphaComponent:.2]
-                             range: kilosolRange];
+  [attributedSolCount addAttribute: NSFontAttributeName
+                             value: radixFont
+                             range: NSMakeRange([solCount length] - (3 * 4) - 1, 1)];
   
   [textField setAttributedStringValue: attributedSolCount];
 }

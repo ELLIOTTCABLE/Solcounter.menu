@@ -25,9 +25,8 @@
                                          userInfo: nil
                                           repeats: YES];
   
-  NSNib *nib = [[[NSNib alloc] initWithNibNamed: @"Solcounter" bundle: bundle] autorelease];
-  
-  [nib instantiateNibWithOwner: self topLevelObjects: /* sets `textField` */ nil];
+  [[[[NSNib alloc] initWithNibNamed: @"Solcounter" bundle: bundle] autorelease]
+    instantiateNibWithOwner: self topLevelObjects: /* sets `textField` */ nil];
   [self setView: textField];
   
   [self initTextField];

@@ -51,14 +51,14 @@
 }
 
 -(void) handleTimer: (NSTimer*)_ {
-  double date = [[NSDate date] timeIntervalSince1970];
+  double date = [[NSDate date] timeIntervalSince1970] / 86400.0;
   
   NSString *solCount = [NSString stringWithFormat: @"%3llu %03llu ſ %03llu %03llu %03llu",
-    (unsigned long long int)(date / 86400000.0)       % 1000,
-    (unsigned long long int)(date /    86400.0)       % 1000,
-    (unsigned long long int)(date /       86.4)       % 1000,
-    (unsigned long long int)(date /        0.0864)    % 1000,
-    (unsigned long long int)(date /        0.0000864) % 1000];
+    (unsigned long long int)(date / 1000.0)         % 1000,
+    (unsigned long long int)(date /    1.0)         % 1000,
+    (unsigned long long int)(date /    0.001)       % 1000,
+    (unsigned long long int)(date /    0.000001)    % 1000,
+    (unsigned long long int)(date /    0.000000001) % 1000];
   
   NSMutableAttributedString *attributedSolCount = [[[NSMutableAttributedString alloc]
     initWithString: solCount

@@ -10,7 +10,6 @@
 		5120FC5E11BBEB1A00FC34E3 /* SystemUIPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5120FC5D11BBEB1A00FC34E3 /* SystemUIPlugin.framework */; };
 		5120FC6211BBEB8E00FC34E3 /* YRSolcounter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5120FC6111BBEB8E00FC34E3 /* YRSolcounter.m */; };
 		5128772D11BC125600C68C2A /* UserDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5128772C11BC125600C68C2A /* UserDefaults.plist */; };
-		5128777511BC45B700C68C2A /* Solcounter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5128777411BC45B700C68C2A /* Solcounter.xib */; };
 		5128B9FB11BC0A3600EA38A3 /* BundleUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 5128B9F911BC0A3600EA38A3 /* BundleUserDefaults.m */; };
 		516859CA11BFD0E800DC7D20 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 516859C711BFD0E800DC7D20 /* Fonts */; };
 		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
@@ -27,7 +26,6 @@
 		5120FC6011BBEB8E00FC34E3 /* YRSolcounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRSolcounter.h; sourceTree = "<group>"; };
 		5120FC6111BBEB8E00FC34E3 /* YRSolcounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRSolcounter.m; sourceTree = "<group>"; };
 		5128772C11BC125600C68C2A /* UserDefaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UserDefaults.plist; sourceTree = "<group>"; };
-		5128777411BC45B700C68C2A /* Solcounter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Solcounter.xib; sourceTree = "<group>"; };
 		5128B9F911BC0A3600EA38A3 /* BundleUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BundleUserDefaults.m; sourceTree = "<group>"; };
 		5128B9FA11BC0A3600EA38A3 /* BundleUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BundleUserDefaults.h; sourceTree = "<group>"; };
 		516859C711BFD0E800DC7D20 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
@@ -77,7 +75,6 @@
 				8D5B49B7048680CD000E48DA /* Info.plist */,
 				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
 				5128772C11BC125600C68C2A /* UserDefaults.plist */,
-				5128777411BC45B700C68C2A /* Solcounter.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -181,7 +178,6 @@
 			files = (
 				8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */,
 				5128772D11BC125600C68C2A /* UserDefaults.plist in Resources */,
-				5128777511BC45B700C68C2A /* Solcounter.xib in Resources */,
 				516859CA11BFD0E800DC7D20 /* Fonts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

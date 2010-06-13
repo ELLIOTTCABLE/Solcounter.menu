@@ -25,18 +25,16 @@
                                          userInfo: nil
                                           repeats: YES];
   
-  [[[[NSNib alloc] initWithNibNamed: @"Solcounter" bundle: bundle] autorelease]
-    instantiateNibWithOwner: self topLevelObjects: /* sets `textField` */ nil];
-  [self setView: textField];
-  
+  textField = [[NSTextField alloc] initWithFrame: NSMakeRect(0, 0, 200, 21)];
   [self initTextField];
   return self;
 }
 
 -(void) initTextField {
-  NSRect frame = [textField frame];
-  [textField setFrame: NSMakeRect(frame.origin.x, frame.origin.y, frame.size.width, frame.size.height - 1)];
+  [textField setBordered: NO]; [textField setDrawsBackground: NO]; [textField setSelectable: NO];
   [[textField cell] setBackgroundStyle: NSBackgroundStyleRaised];
+  
+  [self setView: textField];
   
   NSURL *fontURL = [NSURL fileURLWithPath: [[self bundle] pathForResource: @"FertigoPro-Truncated"
                                                                    ofType: @"otf"

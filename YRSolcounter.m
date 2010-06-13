@@ -25,7 +25,7 @@
                                          userInfo: nil
                                           repeats: YES];
   
-  textField = [[NSTextField alloc] initWithFrame: NSMakeRect(0, 0, 200, 21)];
+  textField = [[NSTextField alloc] initWithFrame: NSMakeRect(0, 0, 0, 21)];
   [self initTextField];
   return self;
 }
@@ -69,6 +69,7 @@
                                       [NSCharacterSet characterSetWithCharactersInString: @"ſ"]]];
   
   [textField setAttributedStringValue: attributedSolCount];
+  [textField sizeToFit];
 }
 
 -(void) dealloc

@@ -54,3 +54,11 @@ activate the ‘Release’ target, and select “Build > Build and Analyze.”
 
 Once the preference pane has compiled, simply double-click the product to install it, and open it to enable
 `Solcounter.menu`!
+
+License
+-------
+This project is released for public usage under the terms of the very-permissive [ISC license][] (a
+modern evolution of the MIT / BSD licenses); more information is available in [COPYING][].
+
+   [ISC license]: <http://choosealicense.com/licenses/isc/> "Information about the ISC license"
+   [COPYING]: <./COPYING.text>
